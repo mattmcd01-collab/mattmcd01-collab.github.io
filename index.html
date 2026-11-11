@@ -1,10 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta name="description" content="Matthew McDonald — Writer / Director, Los Angeles.">
+
   <title>Matthew McDonald</title>
 
   <style>
@@ -15,34 +16,44 @@
     }
 
     body {
-      background: #f8f8f6;
-      color: #171717;
+      background: #f7f7f5;
+      color: #111;
       font-family: Helvetica, Arial, sans-serif;
       min-height: 100vh;
-      padding: 34px 4vw;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      padding: 28px 32px;
     }
 
-    header, footer {
+    .header {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
+
       font-size: 11px;
+      line-height: 1.4;
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
-    main {
-      margin: auto 0;
-      padding: 80px 0;
+    .header-right {
+      text-align: right;
+    }
+
+    .main {
+      min-height: calc(100vh - 56px);
+      display: grid;
+      grid-template-columns: 1fr 42vw 1fr;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .name {
+      align-self: center;
     }
 
     h1 {
-      font-size: clamp(64px, 13vw, 190px);
+      font-size: clamp(60px, 9vw, 150px);
       line-height: 0.78;
-      letter-spacing: -0.095em;
+      letter-spacing: -0.09em;
       font-weight: 700;
       text-transform: uppercase;
     }
@@ -51,43 +62,85 @@
       display: block;
     }
 
-    .details {
-      margin-top: 65px;
-      font-size: 13px;
-      line-height: 1.8;
+    .photo-container {
+      width: 100%;
+    }
+
+    .photo-container img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .info {
+      align-self: end;
+      padding-bottom: 2px;
+
+      font-size: 12px;
+      line-height: 1.7;
       letter-spacing: 0.02em;
     }
 
-    a {
-      color: inherit;
+    .info a {
+      color: #111;
       text-decoration: none;
       border-bottom: 1px solid #999;
       padding-bottom: 2px;
     }
 
-    a:hover {
-      border-color: #171717;
+    .info a:hover {
+      border-color: #111;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 900px) {
       body {
-        padding: 24px;
+        padding: 22px;
       }
 
-      header, footer {
-        font-size: 9px;
+      .main {
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 70px 0 40px;
+        gap: 35px;
       }
 
-      main {
-        padding: 60px 0;
+      .name {
+        order: 1;
+      }
+
+      .photo-container {
+        order: 2;
+        width: 72%;
+        margin-left: auto;
+      }
+
+      .info {
+        order: 3;
+        align-self: auto;
       }
 
       h1 {
-        font-size: 17vw;
+        font-size: 18vw;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .photo-container {
+        width: 88%;
       }
 
-      .details {
-        margin-top: 45px;
+      .header {
+        font-size: 9px;
+      }
+
+      .main {
+        padding-top: 55px;
+      }
+
+      h1 {
+        font-size: 19vw;
       }
     }
   </style>
@@ -95,30 +148,37 @@
 
 <body>
 
-  <header>
-    <span>MM / 001</span>
-    <span>Los Angeles, CA</span>
+  <header class="header">
+    <div>MM / 001</div>
+
+    <div class="header-right">
+      Los Angeles, CA
+    </div>
   </header>
 
-  <main>
-    <h1>
-      <span>Matthew</span>
-      <span>McDonald</span>
-    </h1>
+  <main class="main">
 
-    <div class="details">
+    <div class="name">
+      <h1>
+        <span>Matthew</span>
+        <span>McDonald</span>
+      </h1>
+    </div>
+
+    <div class="photo-container">
+      <img src="portrait.jpg" alt="Matthew McDonald">
+    </div>
+
+    <div class="info">
       Writer / Director<br>
       Los Angeles, California<br><br>
+
       <a href="mailto:mattmcd01@gmail.com">
         mattmcd01@gmail.com
       </a>
     </div>
-  </main>
 
-  <footer>
-    <span>Matthew McDonald</span>
-    <span>© 2026</span>
-  </footer>
+  </main>
 
 </body>
 </html>
