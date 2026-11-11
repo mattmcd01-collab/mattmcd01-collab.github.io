@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Matthew McDonald — Writer / Director, Los Angeles.">
+  <title>Matthew McDonald</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #f8f8f6;
+      color: #171717;
+      font-family: Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      padding: 34px 4vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    header, footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    main {
+      margin: auto 0;
+      padding: 80px 0;
+    }
+
+    h1 {
+      font-size: clamp(64px, 13vw, 190px);
+      line-height: 0.78;
+      letter-spacing: -0.095em;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    h1 span {
+      display: block;
+    }
+
+    .details {
+      margin-top: 65px;
+      font-size: 13px;
+      line-height: 1.8;
+      letter-spacing: 0.02em;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid #999;
+      padding-bottom: 2px;
+    }
+
+    a:hover {
+      border-color: #171717;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 24px;
+      }
+
+      header, footer {
+        font-size: 9px;
+      }
+
+      main {
+        padding: 60px 0;
+      }
+
+      h1 {
+        font-size: 17vw;
+      }
+
+      .details {
+        margin-top: 45px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <span>MM / 001</span>
+    <span>Los Angeles, CA</span>
+  </header>
+
+  <main>
+    <h1>
+      <span>Matthew</span>
+      <span>McDonald</span>
+    </h1>
+
+    <div class="details">
+      Writer / Director<br>
+      Los Angeles, California<br><br>
+      <a href="mailto:mattmcd01@gmail.com">
+        mattmcd01@gmail.com
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <span>Matthew McDonald</span>
+    <span>© 2026</span>
+  </footer>
+
+</body>
+</html>
